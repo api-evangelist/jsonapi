@@ -1,23 +1,73 @@
 aid: jsonapi
+
 name: Json API APP
-description: 'Json API APP is a company surfaced via the API Evangelist harvest backlog (source: g2-catalog)
-  and added to the network as a stub for full-pipeline profiling.'
+
+image: https://www.jsonapi.co/assets/open-graph.png
+
+description: 'Json API APP is a marketplace where developers can monetize their APIs, logical components, microservices, and systems with zero commission. It offers a curated catalog of public APIs, databases, queues, servers, webhooks, and tools. The platform is invite‑only, providing a space for developers to sell, buy, and discover high‑quality APIs and components, aiming to reduce time‑to‑market and improve product ROI. It also hosts blogs, podcasts, and community resources for developers.'
+
 url: https://raw.githubusercontent.com/api-evangelist/jsonapi/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:g2-catalog
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-20 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-10-20'
+
 modified: '2026-10-20'
+
 tags:
-- Company
-apis: []
+- Marketplace
+- API
+- Monetization
+- DeveloperTools
+- Community
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/jsonapi-hosts.yml
+- type: Vendors
+  url: vendors/jsonapi-vendors.yml
+- type: Security
+  url: https://www.jsonapi.co/public-api/category/Security
+- type: Newsroom
+  url: https://www.jsonapi.co/public-api/News
+- type: DomainSecurity
+  url: security/jsonapi-domain-security.yml
 - type: Website
   url: https://jsonapi.co/
+
+- type: Documentation
+  url: https://www.jsonapi.co/about-us
+- type: Blog
+  url: https://www.jsonapi.co/blogs
+- type: PrivacyPolicy
+  url: https://www.jsonapi.co/privacy-policy
+
+apis: []
+
+x-coverage:
+  state: unreadable
+  reason: no-machine-readable-spec
+  detail: No OpenAPI, AsyncAPI, GraphQL, gRPC, or WSDL contracts were found on the provider's site.
+  evidence:
+    - url: https://www.jsonapi.co/about-us
+      status: 200
+  checked: '2026-10-20'
+x-enrichment:
+  date: '2026-10-20'
+  status: enriched
+  artifacts_added: 6
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local
